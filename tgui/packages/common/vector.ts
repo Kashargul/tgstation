@@ -8,7 +8,9 @@
  * @license MIT
  */
 
-function zip(...arr: Vector[]):Vector[]{ return Array(Math.max(...arr.map(a => a.length))).fill().map((_,i) => arr.map(a => a[i]))};
+function zip(...arr: any[]): any[] {
+  return Array(Math.max(...arr.map(a => a.length))).fill().map((_,i) => arr.map(a => a[i]))
+};
 
 const ADD = (a: number, b: number): number => a + b;
 const SUB = (a: number, b: number): number => a - b;
